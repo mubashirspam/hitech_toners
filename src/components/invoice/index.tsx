@@ -10,15 +10,15 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BiPlus } from "react-icons/bi";
-import { FormField } from "./form-field";
+import { FormField } from "../quotation/form-field";
+import { InvoiceItemRow } from "./invoice-item-row";
 import { Textarea } from "@/components/ui/textarea";
-import QuotationItemRow from "./item";
 import { downloadHtmlAsPdf } from "@/lib/utils";
-import QuotationTemplate from "./template";
-import logo from "../../assets/logo.png";
-import type { FormState, QuotationItem } from "./types";
+import InvoiceTemplate from "./template";
+import logo from "@/assets/logo.png";
+import type { FormState, InvoiceItem } from "./types";
 
-const INITIAL_ITEM: QuotationItem = {
+const INITIAL_ITEM: InvoiceItem = {
   description: "",
   quantity: "0",
   unitPrice: "0",
@@ -27,18 +27,17 @@ const INITIAL_ITEM: QuotationItem = {
 const INITIAL_FORM_STATE: FormState = {
   toAddress: "",
   name: "",
-  refNo: "",
+  invoiceNo: "",
   mobile: "",
   date: "",
   brand: "",
   model: "",
   machineType: "",
-  vat: "0",
 };
 
-export default function Quotation() {
+export default function Invoice() {
   const [formState, setFormState] = useState<FormState>(INITIAL_FORM_STATE);
-  const [items, setItems] = useState<QuotationItem[]>([INITIAL_ITEM]);
+  const [items, setItems] = useState<InvoiceItem[]>([INITIAL_ITEM]);
 
   const updateFormField = useCallback(
     (field: keyof FormState, value: string) => {
@@ -56,7 +55,7 @@ export default function Quotation() {
   }, []);
 
   const handleUpdateItem = useCallback(
-    (index: number, updates: Partial<QuotationItem>) => {
+    (index: number, updates: Partial<InvoiceItem>) => {
       setItems((prev) =>
         prev.map((item, i) => (i === index ? { ...item, ...updates } : item))
       );
@@ -73,13 +72,9 @@ export default function Quotation() {
     () =>
       [
         { label: "Name", field: "name" },
-        { label: "Ref No", field: "refNo" },
+        { label: "Invoice No", field: "invoiceNo" },
         { label: "Mobile", field: "mobile" },
         { label: "Date", field: "date", type: "date" },
-        { label: "Brand", field: "brand" },
-        { label: "Model", field: "model" },
-        { label: "Machine Type", field: "machineType" },
-        // { label: "VAT", field: "vat", type: "number" },
       ] as { label: string; field: keyof FormState; type?: string }[],
     []
   );
@@ -96,7 +91,7 @@ export default function Quotation() {
 
       <Card>
         <CardHeader>
-          <CardTitle>Quotation Form</CardTitle>
+          <CardTitle>Invoice Form</CardTitle>
           <CardDescription>Please enter the details</CardDescription>
         </CardHeader>
         <CardContent>
@@ -134,7 +129,7 @@ export default function Quotation() {
         <CardContent>
           <div className="space-y-3">
             {items.map((item, index) => (
-              <QuotationItemRow
+              <InvoiceItemRow
                 key={index}
                 item={item}
                 index={index}
@@ -155,18 +150,14 @@ export default function Quotation() {
       <div className="flex items-center gap-4">
         <Button onClick={resetData}>Reset</Button>
         <Button
-          onClick={() => downloadHtmlAsPdf("quotationContainer", "Quotation")}
+          onClick={() => downloadHtmlAsPdf("invoiceContainer", "Invoice")}
         >
-          Generate Quotation
+          Generate Invoice
         </Button>
       </div>
 
       <div className="fixed top-0 left-0 -translate-x-[150%] -translate-y-[150%] pointer-events-none">
-        <QuotationTemplate
-          id="quotationContainer"
-          {...formState}
-          items={items}
-        />
+        <InvoiceTemplate id="invoiceContainer" {...formState} items={items} />
       </div>
     </div>
   );

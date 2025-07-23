@@ -15,7 +15,7 @@ import { InvoiceItemRow } from "./invoice-item-row";
 import { Textarea } from "@/components/ui/textarea";
 import { downloadHtmlAsPdf } from "@/lib/utils";
 import InvoiceTemplate from "./template";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.jpeg";
 import type { FormState, InvoiceItem } from "./types";
 
 const INITIAL_ITEM: InvoiceItem = {

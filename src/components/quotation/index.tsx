@@ -15,7 +15,7 @@ import { Textarea } from "@/components/ui/textarea";
 import QuotationItemRow from "./item";
 import { downloadHtmlAsPdf } from "@/lib/utils";
 import QuotationTemplate from "./template";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo.jpeg";
 import type { FormState, QuotationItem } from "./types";
 
 const INITIAL_ITEM: QuotationItem = {

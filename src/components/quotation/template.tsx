@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo.jpeg";
 import { format } from "date-fns";
 import type { FormState, QuotationItem } from "./types";
 
@@ -43,14 +43,14 @@ export default function QuotationTemplate({
     >
       <div className="grid grid-cols-3 gap-4">
         <div className="space-y-1">
-          <h2 className="text-[#440873] font-bold text-lg">
-            Shams Al Ghuroub Trading Est.
+          <h2 className="text-[#D35400] font-bold text-lg">
+            ABDULAZIZ HASAN FALAH EST.
           </h2>
           <p className="text-black text-base font-semibold">
             WHOLESALE & RETAIL - SALES & SERVICE
           </p>
-          <p className="text-sm">MECCA-SAUDI ARABIA</p>
-          <p className="text-sm">VAT No. : 302134781700003</p>
+          <p className="text-sm">DAMMAM-SAUDI ARABIA</p>
+          {/* <p className="text-sm">VAT No. : 302134781700003</p> */}
         </div>
 
         <div className="flex items-start justify-center">
@@ -62,47 +62,47 @@ export default function QuotationTemplate({
         </div>
 
         <div dir="rtl" className="space-y-1">
-          <h2 className="text-[#440873] font-bold text-xl">
-            مؤسسة شمس الغروب التجارية
+          <h2 className="text-[#D35400] font-bold text-xl">
+            مؤسسة عبدالعزيز حسن فلدج
           </h2>
           <p className="text-black text-base font-semibold">
             البيع بالجملة والتجزئة-المبيعات والخدمات
           </p>
-          <p className="text-sm">مكة - المملكة العربية السعودية</p>
-          <p className="text-sm">رقم الضريبة :٣٠٢١٣٤٧٨١٧٠٠٠٠٣</p>
+          <p className="text-sm">الدمام - المملكة العربية السعودية</p>
+          {/* <p className="text-sm">رقم الضريبة :٣٠٢١٣٤٧٨١٧٠٠٠٠٣</p> */}
         </div>
       </div>
-      <div className="my-6 bg-[#440873] text-white text-center py-2">
+      <div className="my-6 bg-[#D35400] text-white text-center py-2">
         <h2 className="text-lg font-semibold">QUOTATION</h2>
       </div>
 
       <div className="flex justify-between gap-4">
         <div>
-          <h3 className="text-[#440873] font-bold text-sm">TO</h3>
+          <h3 className="text-[#D35400] font-bold text-sm">TO</h3>
           <div className="whitespace-pre-wrap">{toAddress}</div>
         </div>
 
         <div className="space-y-1">
           <div className="flex items-center justify-between gap-4">
-            <p className="text-[#440873]">Date</p>
+            <p className="text-[#D35400]">Date</p>
             <p className="text-right">{formattedDate}</p>
           </div>
           <div className="flex items-center justify-between gap-4">
-            <p className="text-[#440873]">Name</p>
+            <p className="text-[#D35400]">Name</p>
             <p className="text-right">{name}</p>
           </div>
           <div className="flex items-center justify-between gap-4">
-            <p className="text-[#440873]">Ref No.</p>
+            <p className="text-[#D35400]">Ref No.</p>
             <p className="text-right">{refNo}</p>
           </div>
           <div className="flex items-center justify-between gap-4">
-            <p className="text-[#440873]">Mob No.</p>
+            <p className="text-[#D35400]">Mob No.</p>
             <p className="text-right">{mobile}</p>
           </div>
         </div>
       </div>
       <div className="mt-6">
-        <div className="bg-[#440873] text-white font-bold text-center grid grid-cols-3">
+        <div className="bg-[#D35400] text-white font-bold text-center grid grid-cols-3">
           <div className="py-1.5 px-2.5">MACHINE TYPE</div>
           <div className="py-1.5 px-2.5">BRAND</div>
           <div className="py-1.5 px-2.5">MODEL</div>
@@ -114,7 +114,7 @@ export default function QuotationTemplate({
         </div>
       </div>
       <div>
-        <div className="bg-[#440873] text-white font-bold flex">
+        <div className="bg-[#D35400] text-white font-bold flex">
           <div className="py-1.5 px-2.5 w-16 shrink-0 text-center">S/No</div>
           <div className="py-1.5 px-2.5 flex-1 text-left">DESCRIPTION</div>
           <div className="py-1.5 px-2.5 w-32 shrink-0 text-right">QUANTITY</div>
@@ -170,7 +170,7 @@ export default function QuotationTemplate({
           </div>
 
           <div className="grid grid-cols-2">
-            <div className="bg-[#440873] text-white py-1.5 px-2.5 font-bold">
+            <div className="bg-[#D35400] text-white py-1.5 px-2.5 font-bold">
               GRAND TOTAL
             </div>
             <div className="text-right py-1.5 px-2.5 flex items-center justify-end font-bold">

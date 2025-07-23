@@ -1,7 +1,7 @@
 import { format } from "date-fns";
 import { useMemo } from "react";
-import logo from "@/assets/logo.png";
-import qrCode from "@/assets/qrcode.png";
+import logo from "@/assets/logo.jpeg";
+import qrCode from "@/assets/qrcode.svg";
 import type { FormState, InvoiceItem } from "./types";
 
 type InvoiceProps = FormState & {
@@ -137,16 +137,16 @@ export default function InvoiceTemplate({
     >
       <div className="flex justify-between items-start mb-8">
         <div className="space-y-1">
-          <h2 className="text-[#440873] font-bold text-lg">
-            Shams Al Ghuroub Trading Est.
+          <h2 className="text-[#D35400] font-bold text-lg">
+            ABDULAZIZ HASAN FALAH EST.
           </h2>
           <p className="text-black text-base font-semibold">
             WHOLESALE & RETAIL - SALES & SERVICE
           </p>
-          <p className="text-sm">MECCA-SAUDI ARABIA</p>
-          <p className="text-sm">VAT No. : 302134781700003</p>
-          <p className="text-sm">Email : hitech2025printer@gmail.com</p>{" "}
-          <p className="text-sm">Phone : 0507515641</p>
+          <p className="text-sm">DAMMAM-SAUDI ARABIA</p>
+          {/* <p className="text-sm">VAT No. : 302134781700003</p> */}
+          <p className="text-sm">Email : copymatetoner@gmail.com</p>{" "}
+          <p className="text-sm">Phone : 0531054131</p>
         </div>
 
         <div className="flex items-start justify-center">
@@ -158,21 +158,21 @@ export default function InvoiceTemplate({
         </div>
 
         <div dir="rtl" className="space-y-1">
-          <h2 className="text-[#440873] font-bold text-xl">
-            مؤسسة شمس الغروب التجارية
+          <h2 className="text-[#D35400] font-bold text-xl">
+            مؤسسة عبدالعزيز حسن فلدج
           </h2>
           <p className="text-black text-base font-semibold">
             البيع بالجملة والتجزئة-المبيعات والخدمات
           </p>
-          <p className="text-sm">مكة - المملكة العربية السعودية</p>
-          <p className="text-sm">رقم الضريبة :٣٠٢١٣٤٧٨١٧٠٠٠٠٣</p>
+          <p className="text-sm">الدمام - المملكة العربية السعودية</p>
+          {/* <p className="text-sm">رقم الضريبة :٣٠٢١٣٤٧٨١٧٠٠٠٠٣</p> */}
           <p className="text-sm">
-            البريد الإلكتروني : hitech2025printer@gmail.com
+            البريد الإلكتروني : copymatetoner@gmail.com
           </p>
-          <p className="text-sm">هاتف : 0507515641</p>
+          <p className="text-sm">هاتف : 0531054131</p>
         </div>
       </div>
-      <div className="my-6 bg-[#440873] text-white text-center py-2 border border-border">
+      <div className="my-6 bg-[#D35400] text-white text-center py-2 border border-border">
         <h2 className="text-lg font-semibold">TAX INVOICE (ﻓﺎﺗﻭﺭﺓ ﺿﺭﻳﺑﻳﺔ)</h2>
       </div>
 
@@ -217,7 +217,7 @@ export default function InvoiceTemplate({
       </div>
 
       <div className="flex-1 flex flex-col border border-border border-[0.5px]">
-        <div className="bg-[#440873] text-white text-sm font-semibold flex divide-x divide-white/50">
+        <div className="bg-[#D35400] text-white text-sm font-semibold flex divide-x divide-white/50">
           <div className="py-1 px-3 w-16 shrink-0 text-center">S/No الرقم</div>
           <div className="py-1 px-3 flex-1 text-left">
             DESCRIPTION OF GOODS وصف البضائع
@@ -287,7 +287,7 @@ export default function InvoiceTemplate({
               </div>
             </div>
 
-            <div className="border border-border p-3">
+            {/* <div className="border border-border p-3">
               <h3 className="font-bold text-base mb-2">
                 Company's Bank Details تفاصيل البنك
               </h3>
@@ -311,7 +311,7 @@ export default function InvoiceTemplate({
                   <span className="text-sm">: MAKKAH</span>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="w-full max-w-xs border border-border">
@@ -332,7 +332,7 @@ export default function InvoiceTemplate({
             </div>
 
             <div className="grid grid-cols-2 divide-x divide-border">
-              <div className="bg-[#440873] text-white py-1.5 px-2 font-bold">
+              <div className="bg-[#D35400] text-white py-1.5 px-2 font-bold">
                 GRAND TOTAL (المجموع الكلي)
               </div>
               <div className="text-right py-1.5 px-2 font-bold">
@@ -364,9 +364,9 @@ export default function InvoiceTemplate({
             </div>
 
             <div className="text-right ml-auto">
-              <p className="text-sm">Branch & SWIFT Code: MAKKAH</p>
+              {/* <p className="text-sm">Branch & SWIFT Code: MAKKAH</p> */}
               <p className="text-sm font-semibold">
-                for Shams Al Ghuroub Trading Est. (مؤسسة شمس الغروب للتجارة)
+                for ABDULAZIZ HASAN FALAH EST. (مؤسسة عبدالعزيز حسن فلدج)
               </p>
             </div>
           </div>
